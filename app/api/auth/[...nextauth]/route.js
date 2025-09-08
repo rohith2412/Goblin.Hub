@@ -7,8 +7,8 @@ import User from "../../../../models/userModel"
 const authOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || "57371038101-s8lm5ho9forn97ebqvf9j9b855v5nskn.apps.googleusercontent.com",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "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",
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
 

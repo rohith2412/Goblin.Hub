@@ -62,6 +62,8 @@ const Auth = () => {
        ) : null}
     </div>
     </div>
+
+    
   );
 };
 
