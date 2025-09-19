@@ -1,5 +1,5 @@
 import connectdb from "@/database/connectdb";
-import URL from "@/models/urlModel";
+import LeetcodeURL from "@/models/leetcodeurlModel";
 
 export async function POST(req) {
     try {
@@ -8,7 +8,7 @@ export async function POST(req) {
         
         await connectdb();
 
-        const url = await URL.create({
+        const url = await LeetcodeURL.create({
             user,
             leetcodeURL
         });

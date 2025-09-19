@@ -2,7 +2,7 @@
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 
-export default function URL() {
+export default function LeetcodeURL() {
     const {data: session} = useSession();
     const [url, seturl] = useState("");
 
@@ -13,7 +13,7 @@ export default function URL() {
             return;
         }
         try {
-            const response = await fetch('/api/url', {
+            const response = await fetch('/api/leetcodeurl', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export default function URL() {
     
     return (
         <form onSubmit={handleSubmit}>
-            <input type="url" placeholder="your leetcode url please" value={url} onChange={(e) => seturl(e.target.value)} />
+            <input type="text" placeholder="your leetcode url please" value={url} onChange={(e) => seturl(e.target.value)} />
             <button type="submit">Submit</button>
         </form>
     )
